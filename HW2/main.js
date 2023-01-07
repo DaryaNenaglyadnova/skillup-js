@@ -117,36 +117,67 @@ console.log('Sample JavaScript #2 HW #14');
 
 // console.log(weekFn('2')); // null
 
-    function weekFn(a){
-        let weekday = '';
+    // function weekFn(a){
+    //     var weekday = '';
 
-        switch(a){
-            case 1:
-                weekday = 'Понедельник';
-                break;
-            case 2:
-                weekday = 'Вторник';
-                break;
-            case 3:
-                weekday = 'Среда';
-                break;
-            case 4:
-                weekday = 'Четверг';
-                break;
-            case 5:
-                weekday = 'Пятница';
-                break;
-            case 6:
-                weekday = 'Субота';
-                break;
-            case 7:
-                weekday = 'Воскресенье';
-                break;
-            default: 
-                weekday = null;
+    //     switch(a){
+    //         case 1:
+    //             weekday = 'Понедельник';
+    //             break;
+    //         case 2:
+    //             weekday = 'Вторник';
+    //             break;
+    //         case 3:
+    //             weekday = 'Среда';
+    //             break;
+    //         case 4:
+    //             weekday = 'Четверг';
+    //             break;
+    //         case 5:
+    //             weekday = 'Пятница';
+    //             break;
+    //         case 6:
+    //             weekday = 'Субота';
+    //             break;
+    //         case 7:
+    //             weekday = 'Воскресенье';
+    //             break;
+    //         default: 
+    //             weekday = null;
+    //     }
+    //     return weekday;
+    // }
+    function weekFn(cond) {
+        let str = '';
+      
+        switch (cond) {
+          case 1:
+            str = 'Понедельник';
+            break;
+          case 2:
+            str = 'Вторник';
+            break;
+          case 3:
+            str = 'Среда';
+            break;
+          case 4:
+            str = 'Четверг';
+            break;
+          case 5:
+            str = 'Пятница';
+            break;
+          case 6:
+            str = 'Суббота';
+            break;
+          case 7:
+            str = 'Воскресенье';
+            break;
+          default:
+            str = null;
         }
-        return weekday;
-    }
+      
+        return str;
+      }
     console.log(weekFn(1)); // 'Понедельник'
     console.log(weekFn(3)); // 'Среда'
     console.log(weekFn(7)); // 'Воскресенье'
@@ -269,12 +300,21 @@ console.log('Sample JavaScript #2 HW #14');
 // console.log(oddFn(20)); // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 
 
-    function oddFn(n){
-        let arr = [];
-        for (let i = 1; i <= n; i++)
-            if(i % 2 !== 0) arr.push(i);
+    // function oddFn(n){
+    //     let arr = [];
+    //     for (let i = 1; i <= n; i++)
+    //         if(i % 2 !== 0) arr.push(i);
+    //         return arr;
+    // }
+
+        function oddFn(n) {
+            let arr = [];
+            let i = 0;
+        
+            while (i++ < n) if (i % 2 !== 0) arr.push(i);
+        
             return arr;
-    }
+        }
         console.log(oddFn(10));
         console.log(oddFn(15));
         console.log(oddFn(20));
